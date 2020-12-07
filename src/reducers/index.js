@@ -5,4 +5,12 @@ const rootReducer = combineReducers({
   games: gamesReducer,
 });
 
+const fetchGames = () => {
+  return {
+    type: 'FETCH_GAMES',
+  };
+};
+
+fetchGames();
+
 export default rootReducer;
