@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { loadDetail } from "../actions/detailActions";
 import { Link } from 'react-router-dom'; 
+import { smallImage } from '../util';
 
 const GameStyle = styled(motion.div)`
   min-height: 30vh;
@@ -30,7 +31,7 @@ const Game = ({name, released, image, id}) => {
       <Link to={`/game/${id}`}>
         <h3>{name}</h3>
         <p>{released}</p>
-        <img src={image} alt={name} />
+        <img src={smallImage(image, 640)} alt={name} />
       </Link>
     </GameStyle>
   );
